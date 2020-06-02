@@ -235,11 +235,11 @@ label {
 .header-page:hover,
 .header-page:focus {
   color: var(--accent-color);
+
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.active-page::after,
-.header-page:hover::after,
-.header-page:focus::after {
+.active-page::after {
   content: "";
   position: absolute;
   bottom: 0px;
@@ -277,6 +277,8 @@ label {
 .header-contacts-link:focus {
   color: var(--accent-color);
   fill: var(--accent-color);
+
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* -------------- Sector Hero styles -------------- */
@@ -458,6 +460,8 @@ h1 {
 .team-social-link:focus {
   fill: var(--additinal-color);
   background-color: var(--accent-color);
+
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*-------------- Sector Clients styles -------------- */
@@ -479,6 +483,14 @@ h1 {
   margin-right: 30px;
 }
 
+.client-item:hover,
+.client-item:focus {
+  fill: var(--accent-color);
+  border: 1px solid var(--accent-color);
+
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .client-link {
   display: flex;
   width: 100%;
@@ -488,12 +500,6 @@ h1 {
   justify-content: center;
 
   fill: inherit;
-}
-
-.client-item:hover,
-.client-item:focus {
-  fill: var(--accent-color);
-  border: 1px solid var(--accent-color);
 }
 
 /*-------------- Footer styles -------------- */
@@ -584,6 +590,8 @@ h1 {
 .foot-social-link:hover,
 .foot-social-link:focus {
   background-color: var(--accent-color);
+
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .foot-signin-box {
@@ -679,6 +687,8 @@ h1 {
   background-color: var(--accent-color);
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 3px 1px rgba(0, 0, 0, 0.1);
+
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ------------ Actions with filter --------------- */
@@ -742,32 +752,31 @@ h1 {
 }
 
 .project-item {
-  position: relative;
   width: 370px;
   margin: 15px;
 
   border-radius: 5px;
 }
 
-.project-item .hover-text {
-  display: none;
-}
-
 .project-item:hover,
 .project-item:focus {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
     0px 1px 1px rgba(0, 0, 0, 0.12);
-}
 
-.project-item:hover .hover-text,
-.project-item:focus .hover-text {
-  display: flex;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-link {
   width: 100%;
   height: 100%;
   border-radius: inherit;
+}
+
+.project-foto-box {
+  position: relative;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  vertical-align: middle;
 }
 
 .project-img {
@@ -779,9 +788,13 @@ h1 {
 
 .hover-text {
   position: absolute;
-  top: 0px;
-  height: 294px;
-  width: 100%;
+  bottom: 0px;
+
+  opacity: 0;
+  pointer-events: none;
+
+  display: flex;
+  height: 0%;
   padding: 24px;
   margin-bottom: 0px;
 
@@ -792,6 +805,14 @@ h1 {
   color: var(--additinal-color);
   background: rgba(33, 150, 243, 0.9);
   border-radius: 5px 5px 0px 0px;
+
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-item:hover .hover-text,
+.project-item:focus .hover-text {
+  height: 100%;
+  opacity: 1;
 }
 
 .project-title-box {
