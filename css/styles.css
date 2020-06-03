@@ -229,14 +229,14 @@ label {
   letter-spacing: 0.02em;
 
   color: var(--header-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .active-page,
 .header-page:hover,
 .header-page:focus {
   color: var(--accent-color);
-
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .active-page::after {
@@ -271,14 +271,15 @@ label {
 
   color: var(--basic-color);
   fill: var(--basic-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-contacts-link:hover,
 .header-contacts-link:focus {
   color: var(--accent-color);
   fill: var(--accent-color);
-
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* -------------- Sector Hero styles -------------- */
@@ -454,14 +455,15 @@ h1 {
   align-items: center;
 
   fill: var(--logos-color);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-social-link:hover,
 .team-social-link:focus {
   fill: var(--additinal-color);
   background-color: var(--accent-color);
-
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*-------------- Sector Clients styles -------------- */
@@ -477,6 +479,9 @@ h1 {
   border: 1px solid var(--logos-color);
   border-radius: 4px;
   fill: var(--logos-color);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-item:not(:last-child) {
@@ -486,9 +491,7 @@ h1 {
 .client-item:hover,
 .client-item:focus {
   fill: var(--accent-color);
-  border: 1px solid var(--accent-color);
-
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-color: var(--accent-color);
 }
 
 .client-link {
@@ -585,13 +588,13 @@ h1 {
 
   fill: var(--additinal-color);
   background: rgba(255, 255, 255, 0.1);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .foot-social-link:hover,
 .foot-social-link:focus {
   background-color: var(--accent-color);
-
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .foot-signin-box {
@@ -679,6 +682,10 @@ h1 {
   color: var(--header-color);
   background-color: var(--background-additional);
   border-radius: 4px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-button:hover,
@@ -687,8 +694,6 @@ h1 {
   background-color: var(--accent-color);
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 3px 1px rgba(0, 0, 0, 0.1);
-
-  transition: 2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ------------ Actions with filter --------------- */
@@ -756,14 +761,14 @@ h1 {
   margin: 15px;
 
   border-radius: 5px;
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-item:hover,
 .project-item:focus {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
     0px 1px 1px rgba(0, 0, 0, 0.12);
-
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-link {
@@ -806,7 +811,8 @@ h1 {
   background: rgba(33, 150, 243, 0.9);
   border-radius: 5px 5px 0px 0px;
 
-  transition: 2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: height 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-item:hover .hover-text,
